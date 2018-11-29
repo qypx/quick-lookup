@@ -1,2 +1,2 @@
 # quick-lookup
-R
+some useful functions of R
