@@ -1,0 +1,10 @@
+library(MASS)
+attach(UScereal)
+y=cbind(calories,fat,sugars)
+aggregate(y,by=list(shelf),FUN=mean)
+data("UScereal")
+View(y)
+fit=manova(y~shelf)
+summary(fit,test="Wilks")
+summary.aov(fit)#对每一个变量进行单因素方差分析
+nrow(y)
